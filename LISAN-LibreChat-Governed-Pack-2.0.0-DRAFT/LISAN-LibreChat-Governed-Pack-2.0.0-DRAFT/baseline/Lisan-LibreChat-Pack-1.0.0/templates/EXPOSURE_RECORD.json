@@ -1,0 +1,16 @@
+{
+  "format": "lisan-librechat-exposure-note/1",
+  "profile": null,
+  "new_chat": null,
+  "project_id": null,
+  "forked_from_chat": null,
+  "memory_enabled_observed": null,
+  "agent_tools_observed": [],
+  "selected_skills": [],
+  "provided_materials": [],
+  "prior_studies_retrieved": [],
+  "manifest_of_effective_server_context": null,
+  "unverified_limits": [
+    "هذا سجل ملاحظة؛ لا يثبت وحده كل السياق المركب على الخادم أو خلو التدريب."
+  ]
+}

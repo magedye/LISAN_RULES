@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "PACKAGE_STRUCTURE_CUSTODY_AND_AUTHORED_LINKS_ONLY",
+  "agents": 10,
+  "skills": 19,
+  "prompts": 12,
+  "functions": 37,
+  "layers": 30,
+  "authored_markdown_files": 76,
+  "authored_relative_links_checked": 89,
+  "runtime_files_unchanged": 15,
+  "original_archive_checked": true,
+  "credential_like_literal_paths": [],
+  "failures": [],
+  "excluded_link_scope": "Original sources and runtime notices retain their source-context links; no remote link availability claim.",
+  "not_proven": [
+    "LibreChat UI integration",
+    "model behavior",
+    "semantic correctness",
+    "independent review",
+    "deployment acceptance"
+  ]
+}

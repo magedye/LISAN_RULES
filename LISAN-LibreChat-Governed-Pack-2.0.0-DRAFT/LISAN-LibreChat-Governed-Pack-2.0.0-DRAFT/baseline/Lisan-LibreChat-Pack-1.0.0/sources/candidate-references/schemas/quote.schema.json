@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ref": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 8,
+      "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16384
+    },
+    "kind": {
+      "enum": [
+        "FULL",
+        "EXCERPT"
+      ]
+    }
+  },
+  "required": [
+    "ref",
+    "text",
+    "kind"
+  ],
+  "additionalProperties": false
+}

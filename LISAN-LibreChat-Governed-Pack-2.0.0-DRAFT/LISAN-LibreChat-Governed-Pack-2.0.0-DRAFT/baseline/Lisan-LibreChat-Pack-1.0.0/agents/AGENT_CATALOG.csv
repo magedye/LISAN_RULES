@@ -1,0 +1,11 @@
+﻿code,name_ar,description,skills,children,scope
+COLLECT,جامع المواضع والأدلة,يجمع الشواهد ويحسب نطاق الاسترجاع؛ لا يحسم الدلالة.,lisan-occurrences;lisan-evidence;lisan-layers,,المسار الداخلي
+MORPH,محلل البنية والاشتقاق والتصريف,يفصل التقطيع والجذر والوزن والاشتقاق والتصريف والزيادة.,lisan-morphology;lisan-particles;lisan-evidence;lisan-layers,,المسار الداخلي
+SEM,باحث الدلالة والسياق,يختبر المفهوم والمعنى الموضعي والفروق والعلاقات الداخلية.,lisan-study;lisan-context;lisan-compare;lisan-particles;lisan-letters;lisan-layers;lisan-narrative;lisan-evidence,,المسار الداخلي
+CRITIC,الناقد ومختبر الدحض والمنطق,يفحص أقوى الاعتراضات والبدائل واللزوم دون نقل أقوال خارجية.,lisan-falsify;lisan-logic;lisan-compare;lisan-evidence,,المسار الداخلي
+AUDIT,مدقق المنهج والإسناد والتغطية,يراجع الأدلة والتعرض للمصادر وحدود الادعاء.,lisan-verify;lisan-evidence;lisan-layers;lisan-output,,المسار الداخلي
+ORCH,منسق البحث ومحرر البيان,يحدد المسار ويفوض ويجمع النتائج ويحافظ على حدودها.,lisan-route;lisan-output;lisan-evidence;lisan-cumulative;lisan-layers,COLLECT;MORPH;SEM;CRITIC;AUDIT,المسار الداخلي
+BLIND,Blind Lab — بحث مستقل السياق,يبدأ من سؤال محايد والمتن دون استرجاع دراسات سابقة.,lisan-study;lisan-context;lisan-occurrences;lisan-morphology;lisan-falsify;lisan-logic;lisan-letters;lisan-layers;lisan-evidence;lisan-output,,جلسة جديدة خارج Projects؛ لا طفل لمنسق
+COMPARE,باحث المقارنة واسترجاع الدراسات المراجعة,يعرض دراسة مراجعة في نطاقها أو يجري مقارنة تراكمية وتشخيصية وخارجية معلنة.,lisan-cumulative;lisan-external-compare;lisan-logic;lisan-output;lisan-evidence,,خارجي/مقارنة؛ لا يختاره ORCH كطفل
+SCIENCE,فاحص الدعاوى العلمية,يفحص الربط العلمي والتوافق والتعارض ودعوى الإعجاز بمصادر معلنة.,lisan-science;lisan-logic;lisan-output,,خارجي/مقارنة؛ لا يختاره ORCH كطفل
+HISTORY,باحث التاريخ والوقائع والدروس,يحقق الروايات الخارجية ويفصلها عن الخبر القرآني والدروس المستنبطة.,lisan-history;lisan-narrative;lisan-logic;lisan-output,,خارجي/مقارنة؛ لا يختاره ORCH كطفل

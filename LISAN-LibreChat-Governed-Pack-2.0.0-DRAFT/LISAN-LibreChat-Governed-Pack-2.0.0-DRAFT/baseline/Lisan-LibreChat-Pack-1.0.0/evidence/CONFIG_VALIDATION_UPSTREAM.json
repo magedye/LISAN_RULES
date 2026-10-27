@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "LIBRECHAT_CONFIG_SCHEMA_ONLY",
+  "source_root": "C:\\Users\\Majed\\AppData\\Local\\Temp\\lisan-librechat-source-20261022",
+  "files": [
+    {
+      "file": "librechat.native.yaml",
+      "schema_version": "1.3.18",
+      "input_keys_preserved": true,
+      "input_sha256": "845dc1bd27b35d21cd7f40503629ce647f5920b152c08ee6d04210a7c33e0826"
+    },
+    {
+      "file": "librechat.trial-locked.yaml",
+      "schema_version": "1.3.18",
+      "input_keys_preserved": true,
+      "input_sha256": "4e4e5744bac0aa6307213231e5468b84e57f8747197c2cf3999ce9af7bd3b2f0"
+    },
+    {
+      "file": "librechat.container.yaml",
+      "schema_version": "1.3.18",
+      "input_keys_preserved": true,
+      "input_sha256": "c0e123a3509263def247c413495c5650927ef2f680d1e93f5cdb89a21ab732e5"
+    },
+    {
+      "file": "librechat.external.yaml",
+      "schema_version": "1.3.18",
+      "input_keys_preserved": true,
+      "input_sha256": "1bc6939f3ecfbe4d61a47a679d3665c550506a54a9faf34cc822114ee94e16ab"
+    }
+  ],
+  "deployment": "NOT_RUN",
+  "ui": "NOT_RUN"
+}

@@ -1,0 +1,16 @@
+{
+  "schema":"lisan-work-package-status/1",
+  "work_package":"WP-00",
+  "repo_path":"NOT_SET",
+  "baseline_commit":"NOT_VERIFIED",
+  "owner_authorization":"NOT_GRANTED",
+  "status":"NOT_RUN",
+  "scope":[],
+  "reuse":[],
+  "configuration_only":[],
+  "must_develop":[],
+  "deferred":[],
+  "conflicts":[],
+  "tests":[{"test_id":"AT-01","status":"NOT_RUN","evidence_uri":null}],
+  "notes":["No code modification or deployment authorized by this template"]
+}

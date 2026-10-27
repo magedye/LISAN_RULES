@@ -1,0 +1,16 @@
+{
+  "package": "Quran Lisan Candidate complete package",
+  "plugin_id": "plugin_asdk_app_sites_4f852f1010848191b338196d967bdccb",
+  "live_version": 7,
+  "plugin_file_count": 31,
+  "site_id": "appgprj_6ace24e4e36c81919c97ed1769b5c11c",
+  "full_d1_backup_included": false,
+  "plugin_version": "1.1.0-cumulative.2",
+  "created": "2026-10-14",
+  "source_commit": "e3a8d156c1b60cb0b50d9a0834688fb0d856eafa",
+  "source_file_count": 557,
+  "secret_values_included": false,
+  "release_accepted": false,
+  "deployment_id": "appgdep_6acef98258248191ad33b181c10fdabb",
+  "worker_sha256": "168015c6e47a1ba86a8a391d071abbf272a31da64f907bb02f3ce5db880e4068"
+}

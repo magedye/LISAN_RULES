@@ -1,0 +1,59 @@
+{
+  "package": "LISAN-LibreChat-Governed-Pack-2.0.0-DRAFT",
+  "build_date": "2026-10-23",
+  "approval_state": "DRAFT_NOT_APPROVED",
+  "adoption_state": "NOT_DEPLOYED",
+  "baseline_preserved_files": 170,
+  "baseline_original_zip_sha256": "b29ca15020252c8b9d5aef219e1f6a5bf1863e84b800c35af4ed17e0e7081d6a",
+  "counts": {
+    "agents": 10,
+    "skills": 19,
+    "functions": 37,
+    "method_layers": 30,
+    "ai_capabilities": 38,
+    "gates": 13,
+    "gate_acceptance_scenarios": 38,
+    "ai_evaluation_scenarios": 42,
+    "baseline_live_scenarios": 33
+  },
+  "executed_evidence": {
+    "unit_tests": {
+      "cases": 57,
+      "result": "PASS",
+      "source": "evidence/REFERENCE_UNIT_TESTS_2026-10-23.txt",
+      "fixtures": "NON_QURANIC_SYNTHETIC"
+    },
+    "distribution": {
+      "checks": 14,
+      "result": "PASS",
+      "source": "evidence/DISTRIBUTION_VALIDATION_2026-10-23.txt"
+    },
+    "original_mcp": {
+      "result": "PASS_READONLY_BRIDGE_ONLY",
+      "source": "evidence/ORIGINAL_MCP_READONLY_SMOKE_2026-10-23.json",
+      "capabilities": "status/search/get_verses/verify_quote",
+      "source_authenticity": "OWNER_ATTESTED_NOT_AUTOMATICALLY_PROVEN"
+    },
+    "docx": {
+      "rendered_pages": 28,
+      "a11y_high": 0,
+      "a11y_medium": 0,
+      "a11y_low": 0
+    }
+  },
+  "unexecuted": {
+    "live_librechat_agent_acceptance": "NOT_RUN",
+    "model_semantic_evaluation": "NOT_RUN",
+    "human_independent_review": "NOT_RUN",
+    "formal_acceptance": "NOT_GRANTED",
+    "publisher_tenant_authz": "NOT_IMPLEMENTED",
+    "final_chat_stream_guard": "NOT_IMPLEMENTED",
+    "production_registry_integration": "NOT_IMPLEMENTED"
+  },
+  "notes": [
+    "Baseline archive and extracted source are byte-identical; add-on files do not alter baseline.",
+    "The reference SQLite registry is non-production; its Principal is not derived from a trusted LibreChat authentication provider.",
+    "Corpus TOKEN/form counts are exhaustive only for declared selector, never all morphological roots or semantic meanings.",
+    "No tests executed against owner LibreChat Windows instance; no merge/push/deploy."
+  ]
+}

@@ -1,0 +1,1161 @@
+{
+  "type": "object",
+  "properties": {
+    "record": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0"
+        },
+        "corpus_sha256": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "kind": {
+                "enum": [
+                  "DIRECT_TEXT",
+                  "OBSERVATION",
+                  "SUPPORTED_INFERENCE",
+                  "TENTATIVE_HYPOTHESIS",
+                  "COUNT"
+                ]
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ref": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 8,
+                      "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "kind": {
+                      "enum": [
+                        "FULL",
+                        "EXCERPT"
+                      ]
+                    },
+                    "source_kind": {
+                      "const": "QURAN"
+                    }
+                  },
+                  "required": [
+                    "ref",
+                    "text",
+                    "kind",
+                    "source_kind"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 50
+              },
+              "warrant": {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 8192
+              },
+              "count": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "object",
+                    "properties": {
+                      "forms": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 256
+                        },
+                        "minItems": 1,
+                        "maxItems": 32,
+                        "uniqueItems": true
+                      },
+                      "match": {
+                        "enum": [
+                          "TOKEN",
+                          "SUBSTRING"
+                        ]
+                      },
+                      "normalization": {
+                        "enum": [
+                          "EXACT",
+                          "ARABIC_MARKS_V1"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "forms",
+                      "match",
+                      "normalization"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "unit": {
+                    "enum": [
+                      "VERSES",
+                      "MATCH_EVENTS"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000000
+                  }
+                },
+                "required": [
+                  "query",
+                  "unit",
+                  "value"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "statement",
+              "evidence",
+              "warrant"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "minItems": 0,
+          "maxItems": 50
+        }
+      },
+      "required": [
+        "schema_version",
+        "corpus_sha256",
+        "claims",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "study": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "quran-lisan-study/1"
+        },
+        "study_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8192
+        },
+        "mode": {
+          "enum": [
+            "METHOD",
+            "LOCAL_CONTEXT",
+            "OCCURRENCES",
+            "STUDY",
+            "COMPARE",
+            "HYPOTHESIS",
+            "VERIFY"
+          ]
+        },
+        "corpus": {
+          "type": "object",
+          "properties": {
+            "corpus_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "corpus_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "corpus_sha256": {
+              "type": "string",
+              "minLength": 64,
+              "maxLength": 64
+            },
+            "manifest_sha256": {
+              "type": "string",
+              "minLength": 64,
+              "maxLength": 64
+            },
+            "source_original_sha256": {
+              "type": "string",
+              "minLength": 64,
+              "maxLength": 64
+            },
+            "engine_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "original_source_authenticity": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "corpus_id",
+            "corpus_version",
+            "corpus_sha256",
+            "manifest_sha256",
+            "source_original_sha256",
+            "engine_version",
+            "original_source_authenticity"
+          ],
+          "additionalProperties": false
+        },
+        "selectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "object",
+                "properties": {
+                  "forms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 256
+                    },
+                    "minItems": 1,
+                    "maxItems": 32,
+                    "uniqueItems": true
+                  },
+                  "match": {
+                    "enum": [
+                      "TOKEN",
+                      "SUBSTRING"
+                    ]
+                  },
+                  "normalization": {
+                    "enum": [
+                      "EXACT",
+                      "ARABIC_MARKS_V1"
+                    ]
+                  }
+                },
+                "required": [
+                  "forms",
+                  "match",
+                  "normalization"
+                ],
+                "additionalProperties": false
+              },
+              "structural_query": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "ROOT",
+                      "LEMMA",
+                      "WORD"
+                    ]
+                  },
+                  "value": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "pos": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 16
+                  }
+                },
+                "required": [
+                  "kind",
+                  "value"
+                ],
+                "additionalProperties": false
+              },
+              "refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "minItems": 1,
+                "maxItems": 50,
+                "uniqueItems": true
+              },
+              "context": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 2,
+          "uniqueItems": false
+        },
+        "record": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "2.0"
+            },
+            "corpus_sha256": {
+              "type": "string",
+              "minLength": 64,
+              "maxLength": 64,
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "claims": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64,
+                    "pattern": "^[A-Za-z0-9_-]+$"
+                  },
+                  "kind": {
+                    "enum": [
+                      "DIRECT_TEXT",
+                      "OBSERVATION",
+                      "SUPPORTED_INFERENCE",
+                      "TENTATIVE_HYPOTHESIS",
+                      "COUNT"
+                    ]
+                  },
+                  "statement": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 8192
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "ref": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 8,
+                          "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        "kind": {
+                          "enum": [
+                            "FULL",
+                            "EXCERPT"
+                          ]
+                        },
+                        "source_kind": {
+                          "const": "QURAN"
+                        }
+                      },
+                      "required": [
+                        "ref",
+                        "text",
+                        "kind",
+                        "source_kind"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0,
+                    "maxItems": 50
+                  },
+                  "warrant": {
+                    "type": "string",
+                    "minLength": 0,
+                    "maxLength": 8192
+                  },
+                  "count": {
+                    "type": "object",
+                    "properties": {
+                      "query": {
+                        "type": "object",
+                        "properties": {
+                          "forms": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 256
+                            },
+                            "minItems": 1,
+                            "maxItems": 32,
+                            "uniqueItems": true
+                          },
+                          "match": {
+                            "enum": [
+                              "TOKEN",
+                              "SUBSTRING"
+                            ]
+                          },
+                          "normalization": {
+                            "enum": [
+                              "EXACT",
+                              "ARABIC_MARKS_V1"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "forms",
+                          "match",
+                          "normalization"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "unit": {
+                        "enum": [
+                          "VERSES",
+                          "MATCH_EVENTS"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 1000000000
+                      }
+                    },
+                    "required": [
+                      "query",
+                      "unit",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "id",
+                  "kind",
+                  "statement",
+                  "evidence",
+                  "warrant"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 100
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "minItems": 0,
+              "maxItems": 50
+            }
+          },
+          "required": [
+            "schema_version",
+            "corpus_sha256",
+            "claims",
+            "limitations"
+          ],
+          "additionalProperties": false
+        },
+        "retrieved_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 8,
+            "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+          },
+          "minItems": 0,
+          "maxItems": 6236,
+          "uniqueItems": true
+        },
+        "analyzed_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 8,
+            "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+          },
+          "minItems": 0,
+          "maxItems": 6236,
+          "uniqueItems": true
+        },
+        "remaining_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 8,
+            "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+          },
+          "minItems": 0,
+          "maxItems": 6236,
+          "uniqueItems": true
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200000
+          },
+          "minItems": 0,
+          "maxItems": 256,
+          "uniqueItems": false
+        },
+        "selected_layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "layer_id": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 30
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              },
+              "status": {
+                "enum": [
+                  "SELECTED",
+                  "ANALYZED",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "observation": {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 8192
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "minItems": 0,
+                "maxItems": 6236,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "layer_id",
+              "reason",
+              "status",
+              "evidence_refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 30,
+          "uniqueItems": false
+        },
+        "hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "warrant": {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 8192
+              },
+              "supporting_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "minItems": 0,
+                "maxItems": 6236,
+                "uniqueItems": true
+              },
+              "counter_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "minItems": 0,
+                "maxItems": 6236,
+                "uniqueItems": true
+              },
+              "falsification_condition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "state": {
+                "enum": [
+                  "PROPOSED",
+                  "PREFERRED",
+                  "REJECTED",
+                  "UNRESOLVED"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "statement",
+              "warrant",
+              "supporting_refs",
+              "counter_refs",
+              "falsification_condition",
+              "state"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 30,
+          "uniqueItems": false
+        },
+        "claim_dimensions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "claim_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "claim_scope": {
+                "enum": [
+                  "LOCAL_MEANING",
+                  "FORM_USAGE",
+                  "ROOT_CORE",
+                  "COUNT",
+                  "TEXTUAL_OBSERVATION",
+                  "COMPARISON"
+                ]
+              },
+              "layer_contributions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "layer_id": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 30
+                    },
+                    "component": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2048
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "ref": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 8,
+                          "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        "kind": {
+                          "enum": [
+                            "FULL",
+                            "EXCERPT"
+                          ]
+                        },
+                        "source_kind": {
+                          "const": "QURAN"
+                        }
+                      },
+                      "required": [
+                        "ref",
+                        "text",
+                        "kind",
+                        "source_kind"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "warrant": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 8192
+                    }
+                  },
+                  "required": [
+                    "layer_id",
+                    "component",
+                    "evidence",
+                    "warrant"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 30,
+                "uniqueItems": false
+              },
+              "scope_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "minItems": 0,
+                "maxItems": 6236,
+                "uniqueItems": true
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "minItems": 0,
+                "maxItems": 50,
+                "uniqueItems": false
+              }
+            },
+            "required": [
+              "claim_id",
+              "claim_scope",
+              "layer_contributions",
+              "scope_refs",
+              "limitations"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": false
+        },
+        "counter_tests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "hypothesis_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "ref": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 8,
+                "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+              },
+              "observation": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "warrant": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "outcome": {
+                "enum": [
+                  "SUPPORTS",
+                  "COUNTERS",
+                  "LIMITS",
+                  "UNRESOLVED"
+                ]
+              }
+            },
+            "required": [
+              "hypothesis_id",
+              "ref",
+              "observation",
+              "warrant",
+              "outcome"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 200,
+          "uniqueItems": false
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parent_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "child_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              }
+            },
+            "required": [
+              "parent_id",
+              "child_id",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 200,
+          "uniqueItems": false
+        },
+        "reopen_events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "affected_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 200,
+                "uniqueItems": false
+              },
+              "previous_digest": {
+                "type": "string",
+                "minLength": 64,
+                "maxLength": 64
+              }
+            },
+            "required": [
+              "reason",
+              "affected_ids",
+              "previous_digest"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": false
+        },
+        "research_state": {
+          "enum": [
+            "UNRESOLVED",
+            "PREFERRED",
+            "REJECTED"
+          ]
+        },
+        "semantic_review": {
+          "const": "NOT_REVIEWED"
+        },
+        "release_acceptance": {
+          "const": "NOT_GRANTED"
+        },
+        "provider_kind": {
+          "enum": [
+            "HUMAN_OR_HOST_UNVERIFIED",
+            "TEST_MOCK"
+          ]
+        },
+        "historical_context": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              },
+              "source_sha256": {
+                "type": "string",
+                "minLength": 64,
+                "maxLength": 64
+              },
+              "native_states": {
+                "type": "object",
+                "additionalProperties": true
+              },
+              "raw_record": {},
+              "reuse_state": {
+                "const": "HYPOTHESIS_ONLY_REVALIDATION_REQUIRED"
+              },
+              "quarantined": {
+                "type": "boolean"
+              },
+              "old_evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ref": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 8,
+                      "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "kind": {
+                      "enum": [
+                        "FULL",
+                        "EXCERPT"
+                      ]
+                    },
+                    "source_kind": {
+                      "const": "QURAN"
+                    }
+                  },
+                  "required": [
+                    "ref",
+                    "text",
+                    "kind",
+                    "source_kind"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 200,
+                "uniqueItems": false
+              }
+            },
+            "required": [
+              "source_label",
+              "source_sha256",
+              "native_states",
+              "raw_record",
+              "reuse_state",
+              "quarantined",
+              "old_evidence"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 50,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "study_id",
+        "question",
+        "mode",
+        "corpus",
+        "selectors",
+        "record",
+        "retrieved_refs",
+        "analyzed_refs",
+        "remaining_refs",
+        "receipts",
+        "selected_layers",
+        "hypotheses",
+        "claim_dimensions",
+        "counter_tests",
+        "dependencies",
+        "reopen_events",
+        "research_state",
+        "semantic_review",
+        "release_acceptance",
+        "provider_kind",
+        "historical_context"
+      ],
+      "additionalProperties": false
+    },
+    "retrieved_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 8,
+        "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+      },
+      "minItems": 0,
+      "maxItems": 6236,
+      "uniqueItems": true
+    },
+    "analyzed_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 8,
+        "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+      },
+      "minItems": 0,
+      "maxItems": 6236,
+      "uniqueItems": true
+    },
+    "counter_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 8,
+        "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+      },
+      "minItems": 0,
+      "maxItems": 6236,
+      "uniqueItems": true
+    },
+    "query": {
+      "type": "object",
+      "properties": {
+        "forms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "match": {
+          "enum": [
+            "TOKEN",
+            "SUBSTRING"
+          ]
+        },
+        "normalization": {
+          "enum": [
+            "EXACT",
+            "ARABIC_MARKS_V1"
+          ]
+        }
+      },
+      "required": [
+        "forms",
+        "match",
+        "normalization"
+      ],
+      "additionalProperties": false
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200000
+      },
+      "minItems": 0,
+      "maxItems": 256,
+      "uniqueItems": false
+    },
+    "import_history": {
+      "type": "object",
+      "properties": {
+        "source_label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "native_states": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "raw_record": {},
+        "refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 8,
+            "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+          },
+          "minItems": 0,
+          "maxItems": 50,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "source_label",
+        "native_states",
+        "raw_record"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+test_approval_tool_requires_role (test_reference.ReferenceTests.test_approval_tool_requires_role) ... ok
+test_author_cannot_approve (test_reference.ReferenceTests.test_author_cannot_approve) ... ok
+test_author_cannot_review (test_reference.ReferenceTests.test_author_cannot_review) ... ok
+test_authority_not_from_model (test_reference.ReferenceTests.test_authority_not_from_model) ... ok
+test_blind_mode_cannot_access_prior_study (test_reference.ReferenceTests.test_blind_mode_cannot_access_prior_study) ... ok
+test_cannot_rewrite_lock (test_reference.ReferenceTests.test_cannot_rewrite_lock) ... ok
+test_dont_invent_counterevidence (test_reference.ReferenceTests.test_dont_invent_counterevidence) ... ok
+test_hypothesis_without_evidence (test_reference.ReferenceTests.test_hypothesis_without_evidence) ... ok
+test_missing_countersearch (test_reference.ReferenceTests.test_missing_countersearch) ... ok
+test_no_published_without_approval (test_reference.ReferenceTests.test_no_published_without_approval) ... ok
+test_out_of_scope (test_reference.ReferenceTests.test_out_of_scope) ... ok
+test_partial_full_denied (test_reference.ReferenceTests.test_partial_full_denied) ... ok
+test_partial_not_approved (test_reference.ReferenceTests.test_partial_not_approved) ... ok
+test_release_end_to_end (test_reference.ReferenceTests.test_release_end_to_end) ... ok
+test_repeated_approval_denied (test_reference.ReferenceTests.test_repeated_approval_denied) ... ok
+test_reviewer_cannot_approve (test_reference.ReferenceTests.test_reviewer_cannot_approve) ... ok
+test_reviewer_cannot_change_recorded_review_silently (test_reference.ReferenceTests.test_reviewer_cannot_change_recorded_review_silently) ... ok
+test_stale_revision (test_reference.ReferenceTests.test_stale_revision) ... ok
+test_tool_default_deny (test_reference.ReferenceTests.test_tool_default_deny) ... ok
+test_tool_external_requires_locked_and_explicit (test_reference.ReferenceTests.test_tool_external_requires_locked_and_explicit) ... ok
+test_wrong_quote (test_reference.ReferenceTests.test_wrong_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.003s
+
+OK

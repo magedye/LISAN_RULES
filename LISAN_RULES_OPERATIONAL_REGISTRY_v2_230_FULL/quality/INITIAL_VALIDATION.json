@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0-DRAFT",
+  "baseline_rules": 190,
+  "new_proposed_rules": 40,
+  "total_registry_rows": 230,
+  "baseline_preserved": true,
+  "all_rule_ids_unique": true,
+  "all_text_bilingual": true,
+  "measurement_status": "NO_REAL_RULE_IMPACT_EVALUATION_EXECUTED",
+  "profile_limits": "Original 190 rules received category-based inferred operation profiles, not individually verified implementation contracts.",
+  "source_status": "All new documents are DRAFT; no authority or production enforcement is inferred from attachment.",
+  "files": {
+    "LISAN_RULE_TEST_CASES_460_PROPOSED.csv": "e86fa14c7dfa1d7eb9dad692f79a3b19e47f8ab927a575c2234876e555e4447e",
+    "LISAN_NEW_RULES_TRACEABILITY.csv": "8e57be407587f94474e2cf4c2b4b9aced586a2e93e9e237eeee7e73b38ce68c9",
+    "LISAN_NEW_40_CANDIDATES.csv": "dcd5150b2cb69d199fbfcc3f205b5dfa593bae41a89419cee0ce4122d3a365d4",
+    "LISAN_RULE_IMPACT_EXPERIMENTS_230.csv": "01bc20143920950f14ecb5c445b15a03ff4b1f0784056dbfa8b11a0d2c5ef102",
+    "LISAN_GOVERNANCE_230_PROPOSED_MACHINE_RECORDS.json": "66bb388f453935bb14ec893e1be3b24d1912eda366981ff296dc7072c69349b3",
+    "LISAN_SOURCE_MANIFEST.csv": "b5f5840fd36a4e787141ee7d2d6ca7745de72c91ba1b43f7e43f051901c72bc4",
+    "LISAN_METRIC_CATALOG.csv": "3bd319a2e2cd11d327df97f4b5c40b6d140e3ad87157caf5d21ee470145dbbdf",
+    "LISAN_RULE_EXECUTION_PROFILES_230.csv": "024b38ea08f3d28432f303df364fb008fbc75370eba2d6ad63062db3803f6c14",
+    "LISAN_SEMANTIC_DUPLICATE_SCREENING_40.csv": "9531deda86d0f195cf51dd640aa16526a6336ad88b3944d1c0f7d8578c3aff79",
+    "LISAN_GOVERNANCE_MASTER_230.csv": "bbe5403aa148e0c2c04910da9d78acddfa7f08dbc8a48da49178441cf07ac1e6"
+  }
+}

@@ -1,0 +1,39 @@
+﻿id,capability_ar,research_value,mode,output,risk,gate,permission,test_status
+AI-01,تفكيك السؤال,تحديد المفردة والسياق ونوع الدعوى,كل المسارات,خطة نطاق أولية,إسقاط قيد السؤال,G0 + فحص المدخل,PROPOSE_ONLY,NOT_RUN
+AI-02,اقتراح استعلامات بديلة,تغطية صور اللفظ والاشتقاق المحتمل,Corpus Study,Selectors مرشحة,ضياع مواضع بوسم خاطئ,G1/G2 + حساب مستقل,PROPOSE_ONLY,NOT_RUN
+AI-03,تحديد فجوات البيانات,بيان مواضع تحتاج قرينة أو مصدر بنيوي,كل المسارات,أسئلة معلقة,تخمين الجذر,G1/G3 + uncertain label,PROPOSE_ONLY,NOT_RUN
+AI-04,خطة بحث تكيفية,تقديم الشواهد الأصعب أولًا,Corpus Study,خطة iterated query,انحياز اختيار الشواهد,G2 + قائمة all refs,PROPOSE_ONLY,NOT_RUN
+AI-05,التركيز على ملاحظات قابلة للفحص,تحديد نفي وشرط ومقابلات محتملة,Corpus Study,Observed candidates,تحويل معنى إلى ملاحظة,G3 + evidence links,PROPOSE_ONLY,NOT_RUN
+AI-06,اقتراح تحليل صرفي بديل,إظهار التباس lemma/root/POS,Corpus Study,Alternative parses,وسم بنيوي موروث,G1/G3 + source & conflict,PROPOSE_ONLY,NOT_RUN
+AI-07,اقتراح علاقات نحوية,فاعل/مفعول/متعلق مرشح,Corpus Study,Syntax candidates,هلوسة فاعل,G3 + alignment/manual,PROPOSE_ONLY,NOT_RUN
+AI-08,تحليل التوزيع والاقتران,توليد فئات السياقات المختلفة,Corpus Study,Distribution patterns,تعميم من عينة,G2/G3 + sample scope,PROPOSE_ONLY,NOT_RUN
+AI-09,اقتراح مواضع التوازي,كشف تشابه تعبيري قابل للاختبار,Corpus Study,Parallel candidates,تشابه موضوعي لا دلالي,G3/G6 + exact verses,PROPOSE_ONLY,NOT_RUN
+AI-10,اقتراح تقابل ألفاظ,استخراج أوجه مشتركة وفروق محتملة,Corpus Study/Compare,Contrast hypotheses,افتراض ضدية كلية,G4/G5/G6,PROPOSE_ONLY,NOT_RUN
+AI-11,تفسير ارتباطات الضمائر,اقتراح مراجع مختلفة للضمير,Verse Composition,Coreference alternatives,حسم غير مثبت,G10 + structural audit,PROPOSE_ONLY,NOT_RUN
+AI-12,فحص البناء الخطابي,رصد التعاقب والحصر والشرط,Verse Composition,Discourse notes,بلاغة مستوردة,G10 + Quran-only support,PROPOSE_ONLY,NOT_RUN
+AI-13,توليد فرضيات متعددة,عدم الانغلاق على معنى مألوف,Study,Hypothesis set,Anchoring,G4 + independent evidence,PROPOSE_ONLY,NOT_RUN
+AI-14,اقتراح نواة دلالية,تفسير المشترك بين المواضع,Study,Candidate core,Forced unification,G4/G6 + resistant cases,PROPOSE_ONLY,NOT_RUN
+AI-15,تمييز sense clusters,السماح بتعدد وجوه الاستعمال,Study,Cluster proposals,تقسيم مفرط أو مصطنع,G4/G5,PROPOSE_ONLY,NOT_RUN
+AI-16,فصل النواة والقرائن واللوازم,منع تضخيم المعنى الأساسي,Study,Layered claim,خلط اللوازم بالنص,G6 + reviewer,PROPOSE_ONLY,NOT_RUN
+AI-17,اختبار استبدال افتراضي,استكشاف سبب اختلاف لفظين,Compare,Counterfactual prediction,اعتبار البديل قرآنًا,G4 + hypothetical flag,PROPOSE_ONLY,NOT_RUN
+AI-18,بناء أقوى فرضية منافسة,مقاومة انحياز التأكيد,Study,Rival hypothesis,رجل قش,G4/G5 + reviewer,PROPOSE_ONLY,NOT_RUN
+AI-19,صيد أمثلة مقاومة,اقتراح أصعب الاستعمالات,Study,Counter candidates,اختلاق مضاد,G5 + retrieval receipt,PROPOSE_ONLY,NOT_RUN
+AI-20,تحليل فشل الفرضيات,اقتراح تضييق أو تقسيم أو رفض,Study,Revision proposals,إصلاح اعتباطي,G5/G6,PROPOSE_ONLY,NOT_RUN
+AI-21,صياغة وجه استدلال,ربط مقدمات محددة بالدعوى,Study,Explicit warrant,حجة أنيقة غير مسندة,G6 + reviewer,PROPOSE_ONLY,NOT_RUN
+AI-22,تقدير عدم الحسم,تحديد بدائل لم تفصل الأدلة بينها,Study,Unresolved reasons,ثقة لغوية زائدة,G6 + epistemic limit,PROPOSE_ONLY,NOT_RUN
+AI-23,بحث متجهي Embeddings,اقتراح آيات أو ألفاظ قريبة للتحقيق,Corpus Study,Retrieval candidates,متجه ≠ معنى,G1/G3 + literal verification,PROPOSE_ONLY,NOT_RUN
+AI-24,تجميع استكشافي Clustering,اقتراح تقسيم مواضع للدراسة,Corpus Study,Exploratory clusters,تعزيز وحدة مصطنعة,G4 + review,PROPOSE_ONLY,NOT_RUN
+AI-25,رسم شبكة أدلة مرشحة,ربط نصوص وملاحظات وفرضيات,Study,Candidate graph,رابط graph ≠ حقيقة,G3/G6 + provenance,PROPOSE_ONLY,NOT_RUN
+AI-26,Active Learning انتقاء الأصعب,تركيز مراجعة البشر على حالات غير واضحة,Study,Priority queue,إغفال عينة شاملة,G2 + full population,PROPOSE_ONLY,NOT_RUN
+AI-27,تحليل اختلاف النماذج,كشف مساحات خلاف إضافية,Study/Diagnostic,Agreement or disagreement,إجماع مضلل,G6/G8 + independent tests,PROPOSE_ONLY,NOT_RUN
+AI-28,توليد أمثلة اختبار مضاد اصطناعية,تجريب مرونة policy/schema,QA sandbox,Synthetic fixtures,اختلاطها بالنص الأصلي,G1/G5 + synthetic label,PROPOSE_ONLY,NOT_RUN
+AI-29,اقتراح إعادة استعمال بحث سابق,تحديد finding ذي صلة,Reuse/Extend,Reuse recommendation,توسيع النطاق صامتًا,G0/G9 + qualified lookup,PROPOSE_ONLY,NOT_RUN
+AI-30,اكتشاف أثر تغير الدراسة,اقتراح نتائج متأثرة بنقض جديد,Maintenance,Dependency candidates,فقدان تابع,H11 + graph traversal,PROPOSE_ONLY,NOT_RUN
+AI-31,التركيب الدلالي للآية,جمع معاني محورية مؤهلة ضمن التركيب,Verse Composition,Contextual candidate,تفسير مألوف يقود الدلالة,G10 + provenance,PROPOSE_ONLY,NOT_RUN
+AI-32,صياغة تقرير واضح متعدد المستويات,شرح الفرق بين مباشر/استنتاج/احتمال,كل المسارات,Reader-facing draft,طمس التحفظات,G12 + final check,PROPOSE_ONLY,NOT_RUN
+AI-33,شرح قابلية الاعتراض,عرض أصعب الشواهد وسبب عدم الحسم,كل المسارات,Review dossier,إخفاء counterevidence,G5/G12,PROPOSE_ONLY,NOT_RUN
+AI-34,تدقيق منهجي مبدئي,وسم دوران استدلالي وانتقائية,Review,Risk flags,إيجابيات كاذبة,G6/G8 flag only,PROPOSE_ONLY,NOT_RUN
+AI-35,مقارنة تراثية بعد القفل,عرض اتفاق/اختلاف منفصل,Post-Lock,External comparison,التأثير الرجعي,G11 + sealed input,PROPOSE_ONLY,NOT_RUN
+AI-36,توليد اختبارات ومراقبة الانحراف,قضايا قبول ومخرجات خطأ متوقعة,Engineering QA,Test candidates,تقييم ذاتي متساهل,Human test oracle,PROPOSE_ONLY,NOT_RUN
+AI-37,التنسيق والتلخيص المتدرج,إيجاز دون فقد السند,كل المسارات,Short/long views,سقوط الحدود,G12 + losslessness checks,PROPOSE_ONLY,NOT_RUN
+AI-38,الإدارة التكيفية للأدوات,طلب بحث أدق ثم إعادة محاولة مقيدة,Research execution,Tool action proposal,تجاوز صلاحيات/ميزانية,G0 + tool policy,PROPOSE_ONLY,NOT_RUN

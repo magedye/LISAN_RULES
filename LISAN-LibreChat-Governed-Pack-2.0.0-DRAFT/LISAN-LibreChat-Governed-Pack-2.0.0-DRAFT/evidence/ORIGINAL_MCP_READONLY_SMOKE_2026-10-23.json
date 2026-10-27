@@ -1,0 +1,11 @@
+{
+  "status": "PASS_READONLY_BRIDGE_ONLY",
+  "corpus_id": "tanzil-uthmani-v1.1",
+  "corpus_sha256": "0ae05c1b6c08196b86ea53d166f10e8558e844a37678043730dc7f60ecc09afa",
+  "source_authenticity": "OWNER_ATTESTED_NOT_AUTOMATICALLY_PROVEN",
+  "selector_matched_verses": 640,
+  "selector_semantic_exhaustive": false,
+  "exact_quote_check": true,
+  "tampered_quote_rejected": true,
+  "formal_semantic_acceptance": false
+}

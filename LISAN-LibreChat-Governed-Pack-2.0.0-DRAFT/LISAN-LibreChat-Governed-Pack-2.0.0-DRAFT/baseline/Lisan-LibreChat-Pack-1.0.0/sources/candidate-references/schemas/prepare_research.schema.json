@@ -1,0 +1,175 @@
+{
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "mode": {
+      "enum": [
+        "METHOD",
+        "LOCAL_CONTEXT",
+        "OCCURRENCES",
+        "STUDY",
+        "COMPARE",
+        "HYPOTHESIS",
+        "VERIFY"
+      ]
+    },
+    "query": {
+      "type": "object",
+      "properties": {
+        "forms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "match": {
+          "enum": [
+            "TOKEN",
+            "SUBSTRING"
+          ]
+        },
+        "normalization": {
+          "enum": [
+            "EXACT",
+            "ARABIC_MARKS_V1"
+          ]
+        }
+      },
+      "required": [
+        "forms",
+        "match",
+        "normalization"
+      ],
+      "additionalProperties": false
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 8,
+        "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+      },
+      "minItems": 1,
+      "maxItems": 50,
+      "uniqueItems": true
+    },
+    "comparison_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "forms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            "minItems": 1,
+            "maxItems": 32,
+            "uniqueItems": true
+          },
+          "match": {
+            "enum": [
+              "TOKEN",
+              "SUBSTRING"
+            ]
+          },
+          "normalization": {
+            "enum": [
+              "EXACT",
+              "ARABIC_MARKS_V1"
+            ]
+          }
+        },
+        "required": [
+          "forms",
+          "match",
+          "normalization"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "uniqueItems": false
+    },
+    "structural_query": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "ROOT",
+            "LEMMA",
+            "WORD"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "pos": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        }
+      },
+      "required": [
+        "kind",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "offset": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20000
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    },
+    "count_unit": {
+      "enum": [
+        "VERSES",
+        "MATCH_EVENTS"
+      ]
+    },
+    "resume_receipt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200000
+    },
+    "selected_layers": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 30
+      },
+      "minItems": 0,
+      "maxItems": 30,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "question"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "source": "C:\\Users\\Majed\\.codex\\attachments\\da868366-4ef6-4484-9715-0fdb154c55e8\\Pasted text.txt",
+    "copy": "sources/input-01.txt",
+    "sha256": "1e145e6f1278b1fbe75b5d57a7bc61d39a49b587f02e205c5243cd6fa4e066f7",
+    "role": "owner_supplied_design_input_not_execution_authority"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\تصور 1.md",
+    "copy": "sources/input-02.md",
+    "sha256": "a62cb1c06c2b0763fdd5d5936058cbdda575d9346474beaa20a7553a7b195720",
+    "role": "owner_supplied_design_input_not_execution_authority"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\تصور شامل ودقيق.md",
+    "copy": "sources/input-03.md",
+    "sha256": "d19dc63290cc7bb347ff21b1da12eb56a0ab94b139705c3c788d4905843092f2",
+    "role": "owner_supplied_design_input_not_execution_authority"
+  },
+  {
+    "source": "D:\\APP\\tafseer\\lisanapp3\\تعليمات مهمه .md",
+    "copy": "sources/input-04.md",
+    "sha256": "c5d8a27df615e216f8e053ad74b657a43bccc43370e1ab91a8000cb49cc5c938",
+    "role": "owner_supplied_design_input_not_execution_authority"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\complete-package\\Quran_Lisan_Complete_Package_2026-10-14.zip",
+    "sha256": "d49201debacac2f858bc94167a25d0a488d98625f0c3c0f362e81fe58200f122",
+    "selection": "inferred_recent_package_pending_owner_clarification",
+    "role": "historical_candidate_delivery_not_live_qualification"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\AGHR_REFERENCE.md",
+    "copy": "sources/first-docs/AGHR_REFERENCE.md",
+    "sha256": "064820539a90ffe51ccfd1e6dd4700e82bdd4a1d8edb32ea63e15e642c33ef6b",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\LISAN — منهجية لسان القرآن للتحليل.txt",
+    "copy": "sources/first-docs/LISAN — منهجية لسان القرآن للتحليل.txt",
+    "sha256": "79b67111b4628565ee780781e2aad28edb5ba37af16c68832b30cd46e1105d73",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "copy": "sources/first-docs/LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "sha256": "ee9c75de1cf8ac51587a3d2f48c4d5981005563710cadc46523677b0abd3f729",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\اسباب عدم التزام نماذج الذكاء مع الحلول 2.md",
+    "copy": "sources/first-docs/اسباب عدم التزام نماذج الذكاء مع الحلول 2.md",
+    "sha256": "43172ab2246b6652e0b1c4a09c18740f0dc943ff1cb483743a71e45384e1a6e5",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\مقترح لتجاوز عيوب نماذج الذكاء 2.md",
+    "copy": "sources/first-docs/مقترح لتجاوز عيوب نماذج الذكاء 2.md",
+    "sha256": "c6fb249ce7e9d912246aa5e092fb7bf8340e98fb15f7ec335eb510a846ad439d",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\مقترح لتجاوز عيوب نماذج الذكاء.md",
+    "copy": "sources/first-docs/مقترح لتجاوز عيوب نماذج الذكاء.md",
+    "sha256": "57109fb14ecb941ef982276b1577804b4d66088021b5c1ab795f2ff733c7c365",
+    "role": "late_discovered_owner_design_reference_not_runtime_authority",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "copy": "sources/first-docs/LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "sha256": "ee9c75de1cf8ac51587a3d2f48c4d5981005563710cadc46523677b0abd3f729",
+    "role": "late_discovered_design_and_critique_not_a_native_contract",
+    "review_date": "2026-10-23"
+  },
+  {
+    "source": "D:\\APP\\quran-lisan-plugin\\quran-liber\\First-Docs\\مراجعة على LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "copy": "sources/first-docs/مراجعة على LISAN_Gap_Analysis_and_Enforcement_Blueprint_2026-10-23.md",
+    "sha256": "858b1b52f312bd64d934a7fc0f1ee2234ce1333ad44ddbca38017c3b3dfca122",
+    "role": "late_discovered_design_and_critique_not_a_native_contract",
+    "review_date": "2026-10-23"
+  }
+]

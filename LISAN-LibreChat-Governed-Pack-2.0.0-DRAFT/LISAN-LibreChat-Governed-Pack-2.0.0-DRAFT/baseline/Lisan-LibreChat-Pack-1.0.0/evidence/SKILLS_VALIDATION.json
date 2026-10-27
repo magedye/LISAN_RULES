@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "UPSTREAM_SKILL_PARSER_AND_AUTHORED_PACKAGE_LIMITS",
+  "source_root": "C:/Users/Majed/AppData/Local/Temp/lisan-librechat-source-20261022",
+  "source_revision": "61892206974618971b9001d109485d994dac2816",
+  "command": "node checks/validate-skills.cjs <pinned-source-root> D:/APP/LibreChat/node_modules",
+  "result_capture": "Summary of the successful command output; individual names are in PACKAGE_DESIGN.json",
+  "skills_parsed": 19,
+  "name_and_description_limits": "PASS",
+  "boolean_parse_errors": 0,
+  "tools_expanded_by_skills": false,
+  "ui_loading": "NOT_RUN"
+}

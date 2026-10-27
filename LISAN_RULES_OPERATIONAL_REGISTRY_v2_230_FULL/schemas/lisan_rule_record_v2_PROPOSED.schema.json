@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lisan:proposed-governance-rule-record:v2.0",
+  "title": "LISAN Proposed Governing Rule Record v2.0 (not an active backend contract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "text_en",
+    "text_ar",
+    "kind",
+    "force",
+    "category",
+    "rule_status",
+    "authority_level",
+    "source_reference",
+    "applicable_modes",
+    "trigger_event",
+    "expected_behavior",
+    "enforcement_target",
+    "verification_mode",
+    "failure_action",
+    "admission_status",
+    "impact_metric_id",
+    "impact_measurement_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LISAN-GOV-[0-9]{3,}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "text_en": {
+      "type": "string",
+      "minLength": 10
+    },
+    "text_ar": {
+      "type": "string",
+      "minLength": 10
+    },
+    "kind": {
+      "enum": [
+        "PRINCIPLE",
+        "POLICY",
+        "CONTROL",
+        "CONSTRAINT",
+        "REQUIREMENT",
+        "INSTRUCTION",
+        "GUIDELINE"
+      ]
+    },
+    "kind_ar": {
+      "type": "string"
+    },
+    "force": {
+      "enum": [
+        "MUST",
+        "MUST_NOT",
+        "SHOULD",
+        "MAY"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "rule_status": {
+      "enum": [
+        "PROPOSED",
+        "UNDER_REVIEW",
+        "APPROVED_INACTIVE",
+        "ACTIVE",
+        "SUSPENDED",
+        "SUPERSEDED",
+        "REJECTED"
+      ]
+    },
+    "authority_level": {
+      "enum": [
+        "FOUNDATIONAL_METHOD",
+        "APPROVED_POLICY",
+        "IMPLEMENTATION_CONTRACT",
+        "RUN_INSTRUCTION",
+        "REFERENCE_DRAFT",
+        "PENDING_AUTHORITY_REVIEW"
+      ]
+    },
+    "source_reference": {
+      "type": "string"
+    },
+    "source_quote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_digest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_status": {
+      "type": "string"
+    },
+    "scope_context": {
+      "type": "string"
+    },
+    "applicable_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "applies_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "trigger_event": {
+      "type": "string"
+    },
+    "trigger_predicate": {
+      "type": "string"
+    },
+    "expected_behavior": {
+      "type": "string"
+    },
+    "enforcement_target": {
+      "type": "string"
+    },
+    "enforcement_status": {
+      "enum": [
+        "NOT_VERIFIED",
+        "PRESENT_UNTESTED",
+        "VERIFIED_IN_SCOPE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "verification_mode": {
+      "enum": [
+        "DETERMINISTIC",
+        "HYBRID",
+        "HUMAN_REVIEW",
+        "HUMAN_SEMANTIC_REVIEW"
+      ]
+    },
+    "failure_action": {
+      "enum": [
+        "DENY_PROTECTED_ACTION",
+        "HOLD_TRANSITION",
+        "RESTRICT_TO_DRAFT",
+        "FLAG_FOR_REVIEW",
+        "LOG_ONLY"
+      ]
+    },
+    "admission_status": {
+      "type": "string"
+    },
+    "risk_tier": {
+      "enum": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "reviewer_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approved_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "impact_metric_id": {
+      "type": "string",
+      "pattern": "^M[0-9]{2}$"
+    },
+    "impact_measurement_status": {
+      "enum": [
+        "NOT_MEASURED",
+        "EXPERIMENT_PLANNED",
+        "EXECUTED_UNREVIEWED",
+        "REVIEWED",
+        "INCONCLUSIVE"
+      ]
+    },
+    "impact_baseline": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "impact_treatment": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": "string"
+    }
+  }
+}

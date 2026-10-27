@@ -1,0 +1,19 @@
+{
+  "format": "lisan-librechat-review-note/1",
+  "notice": "HUMAN_DOCUMENTATION_NOT_CANONICAL_AUTHORITY_OR_NATIVE_SCHEMA_CHANGE",
+  "reviewer": null,
+  "reviewed_at": null,
+  "candidate_file": null,
+  "candidate_sha256": null,
+  "review_scope": null,
+  "reviewer_prior_participation": null,
+  "context_exposure": [],
+  "mechanical_check_evidence": [],
+  "semantic_observations": [],
+  "unresolved_objections": [],
+  "decision_text": null,
+  "authorized_reuse_scope": null,
+  "authority_reference": null,
+  "independence_evidence": null,
+  "limits": []
+}

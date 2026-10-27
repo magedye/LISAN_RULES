@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "corpus_sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "kind": {
+            "enum": [
+              "DIRECT_TEXT",
+              "OBSERVATION",
+              "SUPPORTED_INFERENCE",
+              "TENTATIVE_HYPOTHESIS",
+              "COUNT"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ref": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 8,
+                  "pattern": "^[1-9][0-9]{0,2}:[1-9][0-9]{0,3}$"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 16384
+                },
+                "kind": {
+                  "enum": [
+                    "FULL",
+                    "EXCERPT"
+                  ]
+                },
+                "source_kind": {
+                  "const": "QURAN"
+                }
+              },
+              "required": [
+                "ref",
+                "text",
+                "kind",
+                "source_kind"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 50
+          },
+          "warrant": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 8192
+          },
+          "count": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "object",
+                "properties": {
+                  "forms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 256
+                    },
+                    "minItems": 1,
+                    "maxItems": 32,
+                    "uniqueItems": true
+                  },
+                  "match": {
+                    "enum": [
+                      "TOKEN",
+                      "SUBSTRING"
+                    ]
+                  },
+                  "normalization": {
+                    "enum": [
+                      "EXACT",
+                      "ARABIC_MARKS_V1"
+                    ]
+                  }
+                },
+                "required": [
+                  "forms",
+                  "match",
+                  "normalization"
+                ],
+                "additionalProperties": false
+              },
+              "unit": {
+                "enum": [
+                  "VERSES",
+                  "MATCH_EVENTS"
+                ]
+              },
+              "value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000000
+              }
+            },
+            "required": [
+              "query",
+              "unit",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "statement",
+          "evidence",
+          "warrant"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "minItems": 0,
+      "maxItems": 50
+    }
+  },
+  "required": [
+    "schema_version",
+    "corpus_sha256",
+    "claims",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

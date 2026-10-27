@@ -1,0 +1,53 @@
+{
+  "name": "ARABIC_MARKS_V1",
+  "engine_version": "2.0.0",
+  "steps": [
+    "NFC",
+    "remove_explicit_ranges_and_tatweel"
+  ],
+  "removed_ranges": [
+    [
+      "U+0610",
+      "U+061A"
+    ],
+    [
+      "U+064B",
+      "U+0652"
+    ],
+    [
+      "U+0656",
+      "U+065F"
+    ],
+    [
+      "U+0670",
+      "U+0670"
+    ],
+    [
+      "U+06D6",
+      "U+06DC"
+    ],
+    [
+      "U+06DF",
+      "U+06E4"
+    ],
+    [
+      "U+06E7",
+      "U+06E8"
+    ],
+    [
+      "U+06EA",
+      "U+06ED"
+    ]
+  ],
+  "removed_singletons": [
+    "U+0640"
+  ],
+  "original_text_mutated": false,
+  "not_supported": [
+    "root_analysis",
+    "hamza_letter_folding",
+    "wasla_folding",
+    "ya_alif_maqsura_folding",
+    "full_orthographic_equivalence"
+  ]
+}

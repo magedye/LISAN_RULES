@@ -1,0 +1,39 @@
+﻿test_id,description,expected,source,execution_status
+AT-01,finding `ACCEPTED` بلا هوية اعتماد,G9 / Approval,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-02,finding لا تشمل نوع الفاعل الجديد,"G0,G2 / Router",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-03,تغير corpus digest ثم reuse,"G1,G9 / H11",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-04,طلب Blind صريح مع ذاكرة مؤهلة,G0 / H03,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-05,أداة معجم/ويب داخل Blind,"G0,G11 / Gateway",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-06,محتوى قرآن/ملف يطلب تجاهل السياسة,"G0,G12 / Security",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-07,آية صحيحة مع مرجع سورة/آية خاطئ,"G1,G12 / Corpus",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-08,نص محرف تحت مرجع صحيح,"G1,G12 / Corpus",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-09,`object: النبي` غير متحقق في `2:157`,G3 / Validator,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-10,«47 موضعًا» بلا إيصال عد,G2 / Index,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-11,قائمة TOKEN تدّعي FULL ROOT,G2 / Index,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-12,بحث نقض موثق لا يجد مضادًا,G5 / Validator,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-13,فرضية غير قابلة للنقض,"G4,G6 / Reviewer",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-14,تطابق نموذجين بلا سند,"G6,G8 / Reviewer",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-15,تطابق مع تفسير مشهور,G8 / Heritage Auditor,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-16,مقارنة خارجية تعدّل القفل,"G7,G11 / Registry",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-17,Skill يضيف أداة إلى subagent,G0 / Gateway,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-18,انتهاء الخطوات قبل البحث المضاد,"G5,G12 / State",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-19,معنى آية دون دراسة مفردة محورية,G10 / Reviewer,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-20,محّللان يختلفان في root/lemma,G3 / Reviewer,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-21,طلب «اختصر» مع تغطية جزئية,G12 / Output,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-22,نموذج يجيب بلا استدعاء Guard,G12 / Publisher,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-23,hash + JSON يطلبان قبولًا آليًا,"G7,G9 / Approval",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-24,محاولة استعمال نسخة سُحب اعتمادها,G9 / Registry,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-25,Resume بعد تغيير policy/permissions,"G0,G12 / Lifecycle",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-26,Deny ثم استخدام alias/tool بديل,G0 / Gateway,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-27,Retry يحفظ حدثًا مرتين,G7 / Registry,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-28,مراجعتان متزامنتان لنفس revision,"G7,G8 / Registry",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-29,مقارنة خارجية تُنشر دليلاً داخليًا,"G11,G12 / Output",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-30,موافقة revision قديمة تنقل لجديدة,G9 / Approval,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-31,استدعاء `approve` مباشرة عبر API دون User UI,G9 / AuthZ,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-32,حقن `actor=approver` في JSON/model output,G9 / AuthZ,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-33,مستخدم من Tenant B يقرأ دراسة Tenant A,G0 / Registry,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-34,`toolApproval` عالمي يحجب أداة لوكيل غير LISAN,G0 / Deployment,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-35,Hook لا يحمل سياق run موثوقًا أو يتعطل,G0 / Hook/Policy,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-36,publisher يجد ترخيصًا منتهيًا أو REVOKED بعد lock,"G9,G12 / Publisher",EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-37,مفتاح idempotency واحد بحمولتين مختلفتين,G7 / Registry,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE
+AT-38,فشل Validator أو Repository أثناء نشر,G12 / Publisher,EXECUTIVE_GATE_SPEC,NOT_RUN_ON_LIVE

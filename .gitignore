@@ -1,0 +1,31 @@
+# ---- LISAN_RULES .gitignore ----
+
+# ملفات الإعدادات الحقيقية (القوالب *.env.example مسموح بها)
+.env
+.env.*
+!.env.example
+
+# اعتماديات Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# اعتماديات Node
+node_modules/
+npm-debug.log*
+
+# مخارج البناء
+dist/
+build/
+out/
+
+# سجلات ومؤقتات
+*.log
+*.tmp
+
+# مخلفات أنظمة التشغيل
+desktop.ini
+Thumbs.db
+.DS_Store
+~$*

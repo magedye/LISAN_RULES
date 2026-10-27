@@ -1,0 +1,17 @@
+{
+  "schema":"lisan-qualification-decision/1",
+  "finding_id":"NOT_SET",
+  "revision":null,
+  "scope":{"type":"NOT_DEFINED","selector_digest":null},
+  "corpus_sha256":"NOT_VERIFIED",
+  "method_version":"NOT_VERIFIED",
+  "review_status":"NOT_REVIEWED",
+  "epistemic_status":"HYPOTHESIS",
+  "approval_status":"NOT_GRANTED",
+  "release_status":"NOT_RELEASED",
+  "reviewer_subject":null,
+  "approver_subject":null,
+  "publisher_subject":null,
+  "decision_receipt":null,
+  "limitations":["This file is a blank template, not evidence of any approval"]
+}

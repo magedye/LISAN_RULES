@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "scope": "UPSTREAM_SKILL_PARSER_AND_AUTHORED_PACKAGE_LIMITS",
+  "source_root": "C:\\Users\\Majed\\AppData\\Local\\Temp\\lisan-librechat-source-20261022",
+  "skills": [
+    {
+      "name": "lisan-compare",
+      "length": 1179,
+      "input_sha256": "70b73a6c4ade190c530758d319c2f87e39bcdef685f4a995e39db97cc8265651"
+    },
+    {
+      "name": "lisan-context",
+      "length": 936,
+      "input_sha256": "0ebb888bf5139227adce8027a273e3e6971df0437ef4d3b58d0068d63a074e48"
+    },
+    {
+      "name": "lisan-cumulative",
+      "length": 2155,
+      "input_sha256": "9d5f40ee289869da05935f71e75529d0287190e6a3ff87b5656577470c6b53e6"
+    },
+    {
+      "name": "lisan-evidence",
+      "length": 1101,
+      "input_sha256": "39295f3a573c26d45e874774b89f9b6912f9c138232eec2fdfb1c74a3ba3241d"
+    },
+    {
+      "name": "lisan-external-compare",
+      "length": 1025,
+      "input_sha256": "2f32ca7a7cb3670715fa9c06281765e18b5f1543e8207889ecc74ddd2ed8b2a9"
+    },
+    {
+      "name": "lisan-falsify",
+      "length": 926,
+      "input_sha256": "de78858282e87063b15ca0289a6b9f98e05334de85653b6893d82b9aff68dc3d"
+    },
+    {
+      "name": "lisan-history",
+      "length": 1004,
+      "input_sha256": "3e569d44487ef925a3275c7cb17cbc2ee960f7ff86fb34a1159066d616cbc98b"
+    },
+    {
+      "name": "lisan-layers",
+      "length": 1545,
+      "input_sha256": "36509488943d7d8c02ca4b8cd4c7c8250b8a8fdf1928464967c922f5c9e6b3c6"
+    },
+    {
+      "name": "lisan-letters",
+      "length": 979,
+      "input_sha256": "a83c456aaf3dc45b031571f563b359acb7db1195f569e5d12dbbf9df294dc951"
+    },
+    {
+      "name": "lisan-logic",
+      "length": 956,
+      "input_sha256": "7ac2c1548ed5aa67229f459acc209394c47c9f1e810f8ff653f168463fb79fe5"
+    },
+    {
+      "name": "lisan-morphology",
+      "length": 1021,
+      "input_sha256": "df6293d4232510cacd9e782c479970b264af7efc05c46516d2c6f3c580055258"
+    },
+    {
+      "name": "lisan-narrative",
+      "length": 924,
+      "input_sha256": "ce3de0675f88e78f6200c01a403f29332a018ecf7487d7f60bb186b178df7411"
+    },
+    {
+      "name": "lisan-occurrences",
+      "length": 1016,
+      "input_sha256": "c69d93ccfc4eff74b7c262ccce9bbbf44f87060f12b9c34e3936145357a8dbf5"
+    },
+    {
+      "name": "lisan-output",
+      "length": 1020,
+      "input_sha256": "ac317990db9a8f8256f18df9905a14049b4bea7eb529d09f9cdf3191a2fd1a1e"
+    },
+    {
+      "name": "lisan-particles",
+      "length": 956,
+      "input_sha256": "31ed0419d28302747d7c2d2f46739f1b36c3d05e838660d991a43333015e863f"
+    },
+    {
+      "name": "lisan-route",
+      "length": 1855,
+      "input_sha256": "fd2bae20e189c8d88a862232356fedaa9e16871f8b1f477544723e927827ea16"
+    },
+    {
+      "name": "lisan-science",
+      "length": 1065,
+      "input_sha256": "2b96f27b3c2edbe54ea5caec4b2a3edf8e152a5b7656d6f269db07ec901d3e87"
+    },
+    {
+      "name": "lisan-study",
+      "length": 1336,
+      "input_sha256": "8e6a8ac7a00061647421932eeffcd4e0cdef2a2d6ffddac7c61500e919df38e1"
+    },
+    {
+      "name": "lisan-verify",
+      "length": 1454,
+      "input_sha256": "cfd84827820e6268a89edb7af135e1ca781e08d0de5374fd38b03d865dd14384"
+    }
+  ],
+  "tools_expanded_by_skills": false,
+  "ui_loading": "NOT_RUN",
+  "input_binding_note": "Bodies unchanged since the final parser run; hashes bound during packaging."
+}

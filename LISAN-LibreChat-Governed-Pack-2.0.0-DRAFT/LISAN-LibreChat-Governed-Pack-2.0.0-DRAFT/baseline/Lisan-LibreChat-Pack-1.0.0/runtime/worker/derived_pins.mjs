@@ -1,0 +1,1 @@
+export const QAC_PROJECTION_SHA256="0586951aef111cdaebef0aa616f3bfc580146f0e228e86ecae2e177eea5f92e6";

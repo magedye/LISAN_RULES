@@ -1,0 +1,92 @@
+[
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/package.json",
+    "package_path": "runtime/package.json",
+    "sha256": "dda343da9fdd878e55bbc18503b8a55f6b6c0e0f4174688aea7657d352ff9acc",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/notices/DATA_ROLE_AND_TERMS.md",
+    "package_path": "runtime/notices/DATA_ROLE_AND_TERMS.md",
+    "sha256": "70d78f7eb3e969c0b305ec709d7d489273240715f57770d13816a83b11d4d381",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/notices/QAC_NOTICE.txt",
+    "package_path": "runtime/notices/QAC_NOTICE.txt",
+    "sha256": "51ae9bf64a13de4cda60d092de1436408490762faa6343d5b9414d1791528c4d",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/notices/TANZIL_COPYRIGHT.txt",
+    "package_path": "runtime/notices/TANZIL_COPYRIGHT.txt",
+    "sha256": "72493509d507314f60c018fd33aa57d9064a0de42be8926745e4953f59925c62",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/tools/stdio.mjs",
+    "package_path": "runtime/tools/stdio.mjs",
+    "sha256": "209820902d1389c63164b5ec876e491141033c98b34a799cab09556559221ad3",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/data.mjs",
+    "package_path": "runtime/worker/data.mjs",
+    "sha256": "0aa2695f3ee4126a1e7f44c25cdea61717eb4c7049abbf2fc0574a4f99884f88",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/derived_pins.mjs",
+    "package_path": "runtime/worker/derived_pins.mjs",
+    "sha256": "f3e44fdc157a47ce7b5554d1dd65b336703029f29911204e57855cdc1541d5a0",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/engine.mjs",
+    "package_path": "runtime/worker/engine.mjs",
+    "sha256": "20ef725126ee39cee6da9824c58d8318bbd60b615da15956b095e3f7be41661f",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/index.mjs",
+    "package_path": "runtime/worker/index.mjs",
+    "sha256": "852ca58cd546b1c0e63477687b83c4a16ad310e91c701c3275f96111afa244df",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/protocol.mjs",
+    "package_path": "runtime/worker/protocol.mjs",
+    "sha256": "11d9bb7bcfe15df3a15d1726cddaf2e40158291a07daddba8aa84ea519add4d1",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/research.mjs",
+    "package_path": "runtime/worker/research.mjs",
+    "sha256": "98f60fb24e458ac05002bc227dbf064fc26a8d3c1d5f9ae12d50337c283abc4b",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/site.mjs",
+    "package_path": "runtime/worker/site.mjs",
+    "sha256": "c59d10006d4d49629ead452c056cb38c755b3e402f6f21fcc19bbe6a85b6b68a",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/ui.mjs",
+    "package_path": "runtime/worker/ui.mjs",
+    "sha256": "2f628f52960392e252bbefa7d8f64c7c88cb06031c21c81850232b887d191d9a",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/ui_assets.mjs",
+    "package_path": "runtime/worker/ui_assets.mjs",
+    "sha256": "b640e089e99e29294cfa36a9678fc2f51530a75fa12bfe88edec1756960b0fab",
+    "byte_identical": true
+  },
+  {
+    "archive_entry": "Site/Source_Snapshot/plugin/runtime/worker/validation.mjs",
+    "package_path": "runtime/worker/validation.mjs",
+    "sha256": "4dc19b8da0aa6828ea774ddc8e3cc57a27183e5721454c06541c46fd555dfe02",
+    "byte_identical": true
+  }
+]

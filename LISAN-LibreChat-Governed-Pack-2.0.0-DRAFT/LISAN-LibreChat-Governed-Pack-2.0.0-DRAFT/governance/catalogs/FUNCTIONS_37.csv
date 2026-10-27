@@ -1,0 +1,38 @@
+﻿id,original_function,owner,component,boundary,package_status,qualification_status,operation_owner,authority_boundary,evidence_required
+H01,منسق السؤال والبحث: تحديد المطلوب والنطاق وتوزيع المهام,ORCH,lisan-route,توجيه نصي؛ لا محرك سياسة مستقل,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,ORCH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H02,أمين المصدر والمنهج: التحقق من المصدر والإصدار والقدرات المتاحة,COLLECT + AUDIT,lisan-evidence + MCP,فحص نسخة/جاهزية؛ أصالة المصدر وقبوله ليسا مشتقين من البصمة,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,COLLECT + AUDIT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H03,مدير السياق والعزل: بناء سياق كل وكيل وإنفاذ حدود Blind Lab,إعداد المضيف + BLIND,تعطيل الذاكرة والأدوات الزائدة؛ محادثة نظيفة,عزل تشغيلي جزئي؛ الإنفاذ الشامل C01 في الملحق,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,إعداد المضيف + BLIND,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H04,محقق الأدلة والإسناد: التحقق من وجود المرجع ومطابقته,AUDIT,lisan-evidence + أدوات المطابقة,مطابقة آلية؛ صحة الاستنباط مراجعة منفصلة,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,AUDIT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H05,محاسب التغطية والاكتمال: حساب الحصر والتحليل بحسب نطاق الدعوى,COLLECT + AUDIT,lisan-occurrences + قالب التغطية,حساب من مراجع ومقام معلوم؛ لا ادعاء شمول موضوعي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,COLLECT + AUDIT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H06,مدقق الالتزام المنهجي والتسرب: كشف مخالفة حدود المصدر والمنهج,AUDIT,lisan-verify,يرصد الدليل الظاهر؛ لا يكشف محتوى التدريب,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,AUDIT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H07,محلل المنطق المجرد: فحص المقدمات والنتائج واللزوم والتناقض والدوران,CRITIC,lisan-logic,نقد معلل لا سلطة حسم,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,CRITIC,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H08,موثق التنفيذ والسلالة: تسجيل ما نُفذ فعلًا,سجل أدوات المضيف + المشغّل,تصدير السجل وRUN_WORKBOOK,السجل غير موقّع كدليل قبول؛ C02 لربط غير قابل للتجاوز,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,سجل أدوات المضيف + المشغّل,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H09,أمين سجل البحث والمعرفة: حفظ الأحكام وإصداراتها وروابطها,المشغّل/المراجع,REVIEW_RECORD + تصدير ملفات,حفظ يدوي فقط؛ C03 للخدمة الدائمة والصلاحيات,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,المشغّل/المراجع,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H10,مسترجع المعرفة المؤهلة: استرجاع ما يجوز استخدامه في الطلب الحالي,ORCH + COMPARE,lisan-cumulative,استرجاع بطاقة مراجعة مقدمة يدويًا أولًا؛ خدمة الاسترجاع المؤهل الآلية C03,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,ORCH + COMPARE,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H11,مراقب الاعتماديات وإعادة الفحص: تحديد أثر الأدلة والتغييرات الجديدة,المشغّل + AUDIT,DEPENDENCY_REGISTER,إعادة فحص يدوية؛ C04 للتأثير الآلي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,المشغّل + AUDIT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H12,المراجع المستقل: التحقق من نتيجة محددة عند طلب اعتمادها,مراجع منفصل مسؤول,تكليف مراجعة مستقل,ليس AUDIT الطفل قبولًا مستقلاً؛ C05 لتوثيق الاستقلال,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,مراجع منفصل مسؤول,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+H13,مصمم ومحرر الإخراج: اختيار طريقة العرض وتحسين الوضوح,ORCH,lisan-output,تحرير يحفظ القيود؛ Artifacts اختياري غير مفعل,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,ORCH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V01,جامع مواضع الجذر أو الصيغة أو التركيب,COLLECT,lisan-occurrences,استرجاع من خادم مثبت,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,COLLECT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V02,محلل البنية والوصف اللغوي,MORPH,lisan-morphology,QAC وصف مساعد؛ ليس محللًا شاملًا مؤهلاً,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V03,باحث الاشتقاق,MORPH,lisan-morphology,الاشتقاق فصل تحليلي مع شواهد,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V04,باحث التصريف,MORPH,lisan-morphology,التصريف منفصل عن الجذر,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V05,باحث حروف الزيادة والعناصر الصرفية,MORPH,lisan-morphology + lisan-particles,حروف الزيادة لا تعني حروف المعاني,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V06,باحث الصيغ والأوزان,MORPH,lisan-morphology,الصيغ والأوزان فرضيات مساهمة قابلة للفحص,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V07,باحث المفردة والوحدات المعجمية,SEM + MORPH,lisan-study,المفردة ليست الجذر تلقائيًا,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM + MORPH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V08,باحث حروف المعاني والأدوات,SEM,lisan-particles,الأدوات مع نطاقها الموضعي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V09,باحث الأنماط التركيبية العامة,SEM,lisan-particles + lisan-context,أنماط مقارنة لا شجرة نحوية مفترضة,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V10,محلل التركيب والأدوار في الموضع,SEM,lisan-context,الأدوار والإحالات والنطاق,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V11,باحث السياق والخطاب,SEM,lisan-context,السياق والخطاب,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V12,باحث مفهوم الجذر,SEM,lisan-study,مفهوم مشترك مرشح أو عدم حسم,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V13,باحث الجوار والفروق الدلالية,SEM + CRITIC,lisan-compare,مشترك وفارق وحامل نصي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM + CRITIC,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V14,باحث المعنى الموضعي,SEM,lisan-context + lisan-layers,دلالة موضعية مفصولة المساهمات,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V15,مركّب البيان الدلالي النهائي,SEM ثم ORCH,lisan-output,تركيب البيان بعد النقد دون زيادة قوة الدعوى,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM ثم ORCH,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+V16,باحث الموضوعات والقصص والسنن والتطبيقات,SEM,lisan-narrative,داخلي؛ التاريخ الخارجي B08,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B01,مولد الفرضيات البديلة,SEM + CRITIC,lisan-falsify,بدائل حقيقية لا عدد إلزامي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM + CRITIC,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B02,باحث الشواهد المضادة والحالات الصعبة,CRITIC + COLLECT,lisan-falsify,استرجاع مضاد فعلي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,CRITIC + COLLECT,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B03,الناقد المعارض,CRITIC,lisan-logic + lisan-falsify,نقد داخلي منفصل عن الأقوال الخارجية,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,CRITIC,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B04,عارض الأقوال المعارضة,COMPARE,lisan-external-compare,بعد تسجيل النتيجة الداخلية؛ مصادر موثقة,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,COMPARE,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B05,مختبر الدحض,CRITIC,lisan-falsify,اختبار شرط الرفض لا مجرد غياب اعتراض,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,CRITIC,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B06,باحث حروف الجذر وترتيبها,SEM أو BLIND,lisan-letters,استكشافي، لا دلالة حرف ثابتة,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SEM أو BLIND,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B07,فاحص الدعاوى العلمية والتوافق والإعجاز,SCIENCE,lisan-science,مسار خارجي اختياري، بلا إثبات إعجاز آلي,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,SCIENCE,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW
+B08,باحث التاريخ والوقائع والمصادر,HISTORY,lisan-history,مصادر خارجية معلنة، منفصلة عن الخبر القرآني,BASE_SKILL_OR_AGENT_MAPPED,NOT_LIVE_VERIFIED,HISTORY,NO_MODEL_APPROVAL,CORPUS_PINNED_OR_REVIEW

@@ -1,0 +1,84 @@
+# GOVERNED TRIAL REFERENCE ONLY — requires owner approval, source validation and path replacement.
+# This is NOT a production config; intended for a separate LibreChat experimental instance.
+# Package 1.0.0; schema checked against LibreChat 61892206974618971b9001d109485d994dac2816.
+# Native Windows configuration for a dedicated Lisan instance. Provider credentials stay in .env.
+version: 1.3.18
+cache: true
+interface:
+  customWelcome: 'لسان القرآن — بحث داخلي موثق، مع بيان الأدلة والاعتراضات وحدود النتيجة'
+  modelSelect: false
+  parameters: false
+  presets: false
+  multiConvo: false
+  bookmarks: true
+  memories: false
+  temporaryChat: false
+  fileSearch: false
+  fileCitations: false
+  runCode: false
+  webSearch: false
+  contextUsage: true
+  contextCost: true
+  autoSubmitFromUrl: false
+  sharedLinks: false
+  agents:
+    use: true
+    create: false
+    share: false
+    public: false
+  skills:
+    use: true
+    create: false
+    share: false
+    public: false
+  prompts:
+    use: true
+    create: false
+    share: false
+    public: false
+  mcpServers:
+    use: true
+    create: false
+    share: false
+    public: false
+memory:
+  disabled: true
+  personalize: false
+endpoints:
+  agents:
+    disableBuilder: false
+    recursionLimit: 40
+    maxRecursionLimit: 60
+    maxSubagents: 5
+    capabilities:
+      - skills
+      - subagents
+      - tools
+      - ask_user_question
+    toolApproval:
+      enabled: true
+      mode: dontAsk
+      allow:
+        - 'mcp:lisan_readonly:lisan_status'
+        - 'mcp:lisan_readonly:lisan_search'
+        - 'mcp:lisan_readonly:lisan_get_verses'
+        - 'mcp:lisan_readonly:lisan_verify_quote'
+        - 'mcp:lisan_readonly:lisan_validate_analysis'
+        - 'mcp:lisan_readonly:lisan_prepare_research'
+        - 'mcp:lisan_readonly:lisan_check_study'
+      deny:
+        - 'web_search'
+        - 'file_search'
+        - 'execute_code'
+        - 'mcp:*:lisan_save_study'
+        - 'mcp:*:lisan_reopen_study'
+mcpServers:
+  lisan_readonly:
+    type: stdio
+    command: 'C:/Program Files/nodejs/node.exe'
+    args:
+      - 'D:/APP/quran-lisan-plugin/quran-liber/Lisan-LibreChat-Pack-1.0.0/runtime/tools/stdio.mjs'
+    timeout: 60000
+    initTimeout: 60000
+    chatMenu: false
+    serverInstructions: true

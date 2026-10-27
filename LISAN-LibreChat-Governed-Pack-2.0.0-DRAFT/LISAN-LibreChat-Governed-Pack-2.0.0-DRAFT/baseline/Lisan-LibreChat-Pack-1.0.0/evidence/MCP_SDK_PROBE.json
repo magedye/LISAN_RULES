@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "scope": "LOCAL_MCP_SDK_READ_ONLY_INTEROPERABILITY",
+  "node": "v24.11.0",
+  "checks": [
+    "sdk_initialize",
+    "seven_readonly_tools",
+    "status_ready",
+    "get_reference",
+    "exact_quote_accept",
+    "altered_quote_reject",
+    "literal_search_metadata",
+    "method_no_corpus_operations",
+    "invalid_study_reject"
+  ],
+  "corpus_sha256": "0ae05c1b6c08196b86ea53d166f10e8558e844a37678043730dc7f60ecc09afa",
+  "tools": [
+    "lisan_status",
+    "lisan_search",
+    "lisan_get_verses",
+    "lisan_verify_quote",
+    "lisan_validate_analysis",
+    "lisan_prepare_research",
+    "lisan_check_study"
+  ],
+  "semantic_analysis": "NOT_PERFORMED",
+  "librechat_ui": "NOT_RUN",
+  "cloud_model_calls": 0,
+  "note": "A local SDK probe does not qualify the LibreChat host, model behavior, or semantic conclusions."
+}

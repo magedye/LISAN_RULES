@@ -1,0 +1,19 @@
+{
+  "format": "lisan-librechat-diagnostic-note/1",
+  "notice": "MANUAL_COMPANION_NOT_A_NATIVE_STATE_OR_PROOF_OF_TRAINING_PURITY",
+  "trigger": null,
+  "baseline_file_hash": null,
+  "blind_file_hash": null,
+  "blind_exposure_record": null,
+  "scope_equivalence": null,
+  "corpus_equivalence": null,
+  "coverage_comparison": null,
+  "claim_differences": [],
+  "evidence_for_difference_causes": [],
+  "unresolved_causes": [],
+  "recommended_rechecks": [],
+  "prior_result_modified": false,
+  "limits": [
+    "Agreement alone does not prove correctness; disagreement alone does not prove contamination."
+  ]
+}

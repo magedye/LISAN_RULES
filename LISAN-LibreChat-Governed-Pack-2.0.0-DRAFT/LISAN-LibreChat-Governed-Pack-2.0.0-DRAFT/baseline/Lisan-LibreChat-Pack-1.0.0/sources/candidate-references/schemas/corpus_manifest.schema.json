@@ -1,0 +1,278 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "enum": [
+        "UNCONFIGURED",
+        "APPROVED"
+      ]
+    },
+    "corpus_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "file_name": {
+      "const": "quran_corpus.json"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "edition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reading": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "script": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "numbering_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "basmala_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "publisher",
+        "source_reference",
+        "edition",
+        "reading",
+        "script",
+        "numbering_system",
+        "basmala_policy"
+      ]
+    },
+    "source_original_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "canonical_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "expected_record_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "expected_ayah_counts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "surah_id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "ayah_count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "surah_id",
+          "ayah_count"
+        ]
+      }
+    },
+    "verification_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approved_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approval_evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "approved_by",
+        "approved_at",
+        "approval_evidence_ref"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "corpus_id",
+    "version",
+    "file_name",
+    "source",
+    "source_original_sha256",
+    "canonical_sha256",
+    "expected_record_count",
+    "expected_ayah_counts",
+    "verification_reference",
+    "approval",
+    "notes"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "APPROVED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "corpus_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "properties": {
+              "publisher": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_reference": {
+                "type": "string",
+                "minLength": 1
+              },
+              "edition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reading": {
+                "type": "string",
+                "minLength": 1
+              },
+              "script": {
+                "type": "string",
+                "minLength": 1
+              },
+              "numbering_system": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basmala_policy": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "source_original_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "canonical_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "expected_record_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "expected_ayah_counts": {
+            "minItems": 1
+          },
+          "verification_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "approval": {
+            "properties": {
+              "approved_by": {
+                "type": "string",
+                "minLength": 1
+              },
+              "approved_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "approval_evidence_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Corpus manifest — configuration and approval record",
+  "description": "APPROVED is a recorded assertion, not authentication. A separate trusted approval process and runtime validator must check provenance, hashes, actual counts and unique references."
+}

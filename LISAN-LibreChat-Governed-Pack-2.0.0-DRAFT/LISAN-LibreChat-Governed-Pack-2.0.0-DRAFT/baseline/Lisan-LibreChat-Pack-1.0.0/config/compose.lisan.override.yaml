@@ -1,0 +1,12 @@
+# Overlay only. Assumes the dedicated LibreChat Compose service is named api.
+# Validate that service name and the image Node version before use.
+services:
+  api:
+    environment:
+      CONFIG_PATH: /opt/lisan/config/librechat.container.yaml
+      DEPLOYMENT_SKILLS_DIR: /opt/lisan/skills
+    volumes:
+      - type: bind
+        source: D:/APP/quran-lisan-plugin/quran-liber/Lisan-LibreChat-Pack-1.0.0
+        target: /opt/lisan
+        read_only: true

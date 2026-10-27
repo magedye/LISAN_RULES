@@ -1,0 +1,3 @@
+# Derived structural data — private owner candidate only
+`qac_projection.json` is a field-filtered structural projection of the owner-supplied, pinned QAC0.4 file. It is NOT Quran text authority, a definition dictionary or a semantic acceptance source. Original QAC `FORM` is retained as a structural identifier; quotations are re-fetched from `approved/quran_corpus.json`.
+Attribution and the supplied artifact notice are in `QAC_NOTICE.txt`. No general redistribution or copyleft clearance is claimed. The raw QAC file is not redistributed in this deliverable. Rebuilding its projection requires the owner's byte-identical original (`tools/build.py --qac <local-source>`). The included projection is pinned separately and is limited to this private candidate and its evaluation.

@@ -1,0 +1,15 @@
+{
+  "case_id": null,
+  "preconditions": [],
+  "input_file": null,
+  "librechat_revision": null,
+  "agent_instruction_sha256": null,
+  "model_provider_version": null,
+  "action_executed": null,
+  "observed": null,
+  "evidence_files": [],
+  "verdict": "NOT_RUN",
+  "limits": [],
+  "reviewer": null,
+  "executed_at": null
+}

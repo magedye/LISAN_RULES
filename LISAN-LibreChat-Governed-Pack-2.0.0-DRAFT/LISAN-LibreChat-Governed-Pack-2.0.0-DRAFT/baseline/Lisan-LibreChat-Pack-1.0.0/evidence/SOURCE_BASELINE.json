@@ -1,0 +1,57 @@
+{
+  "review_date": "2026-10-22",
+  "package_build_date": "2026-10-23",
+  "upstream": {
+    "repository": "https://github.com/LibreChat-AI/LibreChat",
+    "revision": "61892206974618971b9001d109485d994dac2816",
+    "package_version": "v0.8.9-rc1",
+    "read_only_source_files": [
+      {
+        "path": "packages/data-provider/src/config.ts",
+        "sha256": "e21f0b7072266f252ad73646df68be774ecdf7f655c7f89d9ba1ea035cfcf8b7"
+      },
+      {
+        "path": "packages/data-provider/src/limits.ts",
+        "sha256": "cb64e7aef83415cc194a488ca7da4fcca32a309550c6f7ebfaae58412386a2e4"
+      },
+      {
+        "path": "packages/api/src/agents/validation.ts",
+        "sha256": "c84a6c3692d118896ead9cc057c9b2ae41d4f06e8b003d0a3eec1b542e16cb74"
+      },
+      {
+        "path": "packages/api/src/skills/parse.ts",
+        "sha256": "2e1f1890c22c37e461710ebc5562da6f4a24ddf2e38c7a5febc9c51ff12d3fe5"
+      },
+      {
+        "path": "packages/api/src/skills/deployment.ts",
+        "sha256": "131695585c15c435e39773f79a2a7cf12e7c996431167784b159df72673f6660"
+      },
+      {
+        "path": "packages/api/src/plugins/manifest.ts",
+        "sha256": "f85da37ad2c0df798cec65faae354443831f89f5cb38b2ff963886c961cddcda"
+      },
+      {
+        "path": "packages/api/src/agents/hitl/policy.ts",
+        "sha256": "22847f6fe875345a8138722908d673304c631b37fd931547f0d82739d8b6bd90"
+      }
+    ]
+  },
+  "local_snapshot": {
+    "path": "D:\\APP\\LibreChat",
+    "revision": "74ccf8e3654a0ec5bbae537d9339e622c0625885",
+    "package_version": "v0.8.8",
+    "working_tree": "EXISTING_OWNER_CHANGES_PRESERVED",
+    "application_started": false
+  },
+  "validation_dependencies": {
+    "typescript": "5.9.3",
+    "zod": "3.25.67",
+    "js-yaml": "4.3.2",
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@librechat/data-schemas": "0.0.74"
+  },
+  "node": "v24.11.0",
+  "application_source_changes": false,
+  "deployments_performed": 0,
+  "model_api_calls": 0
+}
